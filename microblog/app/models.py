@@ -45,7 +45,7 @@ class User(UserMixin, db.Model):
         return f'https://www.gravatar.com/avatar/{digest}?d=identicon&s={size}'.format(digest, size)
 
     def follow(self, user):
-        if not self.is_folowing(user):
+        if not self.is_following(user):
             self.followed.append(user)
 
     def unfollow(self, user):
