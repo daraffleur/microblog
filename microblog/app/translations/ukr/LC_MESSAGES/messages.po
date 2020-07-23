@@ -21,228 +21,228 @@ msgstr ""
 
 #: app/__init__.py:23
 msgid "Please log in to access this page."
-msgstr ""
+msgstr "Будь ласка, зареєструйтеся, щоб увійти."
 
 #: app/email.py:28
 msgid "[Microblog] Reset Your Password"
-msgstr ""
+msgstr "[Мікроблог] Скинути пароля"
 
 #: app/forms.py:9 app/forms.py:16 app/forms.py:34
 msgid "Username"
-msgstr ""
+msgstr "Ім'я користувача"
 
 #: app/forms.py:10 app/forms.py:18 app/forms.py:60
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: app/forms.py:11
 msgid "Remember Me"
-msgstr ""
+msgstr "Запам'ятати мене"
 
 #: app/forms.py:12 app/routes.py:66 app/templates/login.html:5
 msgid "Sign In"
-msgstr ""
+msgstr "Ввійти"
 
 #: app/forms.py:17 app/forms.py:55
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: app/forms.py:19 app/forms.py:61
 msgid "Repeat Password"
-msgstr ""
+msgstr "Повторити пароль"
 
 #: app/forms.py:20 app/routes.py:87 app/templates/register.html:5
 msgid "Register"
-msgstr ""
+msgstr "Зареєструватися"
 
 #: app/forms.py:25
 msgid "Please use a different username!"
-msgstr ""
+msgstr "Будь ласка, введіть інше ім'я!"
 
 #: app/forms.py:30
 msgid "Please use a different email address!"
-msgstr ""
+msgstr "Будь ласка, введіть інший емейл!"
 
 #: app/forms.py:35
 msgid "About me"
-msgstr ""
+msgstr "Про мене"
 
 #: app/forms.py:36 app/forms.py:51
 msgid "Submit"
-msgstr ""
+msgstr "Надіслати"
 
 #: app/forms.py:46
 msgid "Please use a different username."
-msgstr ""
+msgstr "Будь ласка, введіть інше ім'я!"
 
 #: app/forms.py:50
 msgid "Say something"
-msgstr ""
+msgstr "Скажіть щось"
 
 #: app/forms.py:56 app/forms.py:62
 msgid "Request Password Reset"
-msgstr ""
+msgstr "Запит на скидання пароля"
 
 #: app/routes.py:22
 msgid "Your post is now live!"
-msgstr ""
+msgstr "Тепер твій пост існує!"
 
 #: app/routes.py:31 app/templates/base.html:22
 msgid "Home"
-msgstr ""
+msgstr "Домашня сторінка"
 
 #: app/routes.py:46 app/templates/base.html:23
 msgid "Explore"
-msgstr ""
+msgstr "Дізнатися більше"
 
 #: app/routes.py:59
 msgid "Invalid username or password"
-msgstr ""
+msgstr "Неправильне ім'я користувача або пароль"
 
 #: app/routes.py:85
 msgid "Congratulations, you are now a registered user!"
-msgstr ""
+msgstr "Вітаємо, тепер ви зареєстрований користувач!"
 
 #: app/routes.py:100
 msgid "Check your email for the instructions to reset your password"
-msgstr ""
+msgstr "Перевірте свою електронну пошту на наявність інструкцій щодо скидання пароля"
 
 #: app/routes.py:103 app/templates/reset_password_request.html:5
 msgid "Reset Password"
-msgstr ""
+msgstr "Скинути пароль"
 
 #: app/routes.py:117
 msgid "Your password has been reset."
-msgstr ""
+msgstr "Ваш пароль скинуто."
 
 #: app/routes.py:145
 msgid "Your changes have been saved."
-msgstr ""
+msgstr "Ваші зміни збережено."
 
 #: app/routes.py:150 app/templates/edit_profile.html:5
 msgid "Edit Profile"
-msgstr ""
+msgstr "Редагувати профіль"
 
 #: app/routes.py:161 app/routes.py:181
 #, python-format
 msgid "User %(username)s not found."
-msgstr ""
+msgstr "Користувача %(username)s не знайдено."
 
 #: app/routes.py:164
 msgid "You cannot follow yourself!"
-msgstr ""
+msgstr "Ви не можете стежити за собою!"
 
 #: app/routes.py:168
 #, python-format
 msgid "You are following %(username)s!"
-msgstr ""
+msgstr "Ви стежите за %(username)s!"
 
 #: app/routes.py:184
 msgid "You cannot unfollow yourself!"
-msgstr ""
+msgstr "Ви не можете стежити за собою!"
 
 #: app/routes.py:188
 #, python-format
 msgid "You are not following %(username)s."
-msgstr ""
+msgstr "Ви не стежите за %(username)s!"
 
 #: app/templates/404.html:4
 msgid "Not Found"
-msgstr ""
+msgstr "Не знайдено"
 
 #: app/templates/404.html:5 app/templates/500.html:6
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: app/templates/500.html:4
 msgid "An unexpected error has occurred"
-msgstr ""
+msgstr "Сталася невідома помилка"
 
 #: app/templates/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
+msgstr "Повідомлено адміністратору. Вибачте за незручності!"
 
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
-msgstr ""
+msgstr "%(username)s опублікував %(when)s"
 
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
-msgstr ""
+msgstr "Ласкаво просимо в Мікроблог"
 
 #: app/templates/base.html:27
 msgid "Login"
-msgstr ""
+msgstr "Ввійти"
 
 #: app/templates/base.html:29
 msgid "Profile"
-msgstr ""
+msgstr "Профіль"
 
 #: app/templates/base.html:30
 msgid "Logout"
-msgstr ""
+msgstr "Вийти"
 
 #: app/templates/index.html:5
 #, python-format
 msgid "Hi, %(username)s!"
-msgstr ""
+msgstr "Привіт, %(username)s!"
 
 #: app/templates/index.html:17 app/templates/user.html:41
 msgid "Newer posts"
-msgstr ""
+msgstr "Новіші повідомлення"
 
 #: app/templates/index.html:22 app/templates/user.html:46
 msgid "Older posts"
-msgstr ""
+msgstr "Старіші повідомлення"
 
 #: app/templates/login.html:12
 msgid "New User?"
-msgstr ""
+msgstr "Новий користувач?"
 
 #: app/templates/login.html:12
 msgid "Click to Register!"
-msgstr ""
+msgstr "Натисни, щоб зареєструватися!"
 
 #: app/templates/login.html:14
 msgid "Forgot Your Password?"
-msgstr ""
+msgstr "Забув пароль?"
 
 #: app/templates/login.html:15
 msgid "Click to Reset It"
-msgstr ""
+msgstr "Натисни, щоб скинути пароль"
 
 #: app/templates/reset_password.html:5
 msgid "Reset Your Password"
-msgstr ""
+msgstr "Скинути пароль"
 
 #: app/templates/user.html:8
 msgid "User"
-msgstr ""
+msgstr "Користувач"
 
 #: app/templates/user.html:11
 msgid "Last seen on"
-msgstr ""
+msgstr "Востаннє в мережі"
 
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d followers"
-msgstr ""
+msgstr "%(count)d підписників"
 
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d following"
-msgstr ""
+msgstr "%(count)d відстежую"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
-msgstr ""
+msgstr "Редагувати профіль"
 
 #: app/templates/user.html:20
 msgid "Follow"
-msgstr ""
+msgstr "Стежити"
 
 #: app/templates/user.html:27
 msgid "Unfollow"
-msgstr ""
+msgstr "Не стежити"
 
