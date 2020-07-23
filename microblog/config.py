@@ -17,3 +17,5 @@ class Config:
     ADMINS = ['romaniuk.dana@gmail.com']
 
     POSTS_PER_PAGE = 20
+
+    LANGUAGES = ['en', 'es', 'ukr']
