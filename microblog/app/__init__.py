@@ -26,6 +26,10 @@ bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
 
+from app.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
+
 
 @babel.localeselector
 def get_locale():
@@ -61,4 +65,4 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
-from app import routes, models, errors
+from app import routes, models
