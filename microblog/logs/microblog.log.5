@@ -1,5 +1,4 @@
-2020-07-16 19:06:44,272 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-16 19:07:03,045 ERROR: Exception on /edit_profile [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+2020-07-16 19:20:08,601 ERROR: Exception on /edit_profile [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
     cursor, statement, parameters, context
@@ -70,5 +69,37 @@ Traceback (most recent call last):
     cursor.execute(statement, parameters)
 sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
 [SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('Dana', <wtforms.fields.simple.TextAreaField object at 0x7f64272641d0>, 3)]
+[parameters: ('dana', <wtforms.fields.simple.TextAreaField object at 0x7f6426fddc50>, 3)]
 (Background on this error at: http://sqlalche.me/e/13/rvf5)
+2020-07-16 20:21:17,915 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-16 20:21:41,176 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-16 22:13:06,389 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-16 22:13:09,895 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-17 13:12:38,233 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-17 13:13:52,620 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-17 13:37:55,953 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-20 13:16:25,721 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-20 16:08:12,454 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
+2020-07-21 12:39:01,305 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+2020-07-21 13:32:45,083 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+2020-07-21 13:43:46,294 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+2020-07-21 16:49:17,331 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+2020-07-21 16:49:51,534 ERROR: Exception on /reset_password_request [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/routes.py", line 170, in reset_password_request
+    send_email(user)
+TypeError: send_email() missing 4 required positional arguments: 'sender', 'recepients', 'text_body', and 'html_body'
+2020-07-21 18:50:06,755 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+2020-07-21 18:50:32,495 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]

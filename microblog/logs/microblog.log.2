@@ -1,13 +1,4 @@
-2020-07-16 19:10:28,733 ERROR: Exception on /edit_profile [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
-
-The above exception was the direct cause of the following exception:
-
+2020-07-28 17:34:02,558 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -23,51 +14,95 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/routes.py", line 97, in edit_profile
-    db.session.commit()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 163, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
-    self.transaction.commit()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 504, in commit
-    self._prepare_impl()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
-    self.session.flush()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2523, in flush
-    self._flush(objects)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2664, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2624, in _flush
-    flush_context.execute()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
-    update,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
-    statement, multiparams
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1014, in execute
-    return meth(self, multiparams, params)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1133, in _execute_clauseelement
-    distilled_params,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1318, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1512, in _handle_dbapi_exception
-    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('Dana', <wtforms.fields.simple.TextAreaField object at 0x7f6426fb6a50>, 3)]
-(Background on this error at: http://sqlalche.me/e/13/rvf5)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 49, in index
+    prev_url=prev_url)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 36, in block "navbar"
+    <li><a href="{{ url_for('user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
+2020-07-28 17:34:30,155 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:78]
+2020-07-28 17:34:33,982 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 49, in index
+    prev_url=prev_url)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 37, in block "navbar"
+    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 358, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'logout'. Did you mean 'auth.logout' instead?
+2020-07-28 17:34:51,814 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:78]
