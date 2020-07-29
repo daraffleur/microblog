@@ -54,3 +54,4 @@ Traceback (most recent call last):
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
 2020-07-28 17:41:09,328 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:78]
+2020-07-29 15:29:59,980 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:83]
