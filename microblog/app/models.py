@@ -74,13 +74,11 @@ class User(UserMixin, db.Model):
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
     messages_sent = db.relationship('Message',
-                                    foreign_keys="Message.sender_id",
-                                    backref='author',
-                                    lazy='dynamic')
+                                    foreign_keys='Message.sender_id',
+                                    backref='author', lazy='dynamic')
     messages_received = db.relationship('Message',
-                                        foreign_keys="Message.recipient_id",
-                                        backref='recepient',
-                                        lazy='dynamic')
+                                        foreign_keys='Message.recipient_id',
+                                        backref='recipient', lazy='dynamic')
     last_message_read_time = db.Column(db.DateTime)
 
     def __repr__(self):
@@ -157,9 +155,9 @@ class Post(SearchableMixin, db.Model):
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     sender_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    recepient_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    recipient_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     body = db.Column(db.String(140))
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow())
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
-        return f"Message {self.body}"
+        return '<Message {}>'.format(self.body)

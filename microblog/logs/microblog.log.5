@@ -1,13 +1,4 @@
-2020-07-16 19:20:08,601 ERROR: Exception on /edit_profile [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
-Traceback (most recent call last):
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.InterfaceError: Error binding parameter 1 - probably unsupported type.
-
-The above exception was the direct cause of the following exception:
-
+2020-07-31 08:50:50,532 ERROR: Exception on /favicon.ico [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -17,74 +8,36 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/routes.py", line 97, in edit_profile
-    db.session.commit()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/scoping.py", line 163, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1042, in commit
-    self.transaction.commit()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 504, in commit
-    self._prepare_impl()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
-    self.session.flush()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2523, in flush
-    self._flush(objects)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2664, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 69, in __exit__
-    exc_value, with_traceback=exc_tb,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 2624, in _flush
-    flush_context.execute()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 236, in save_obj
-    update,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/persistence.py", line 995, in _emit_update_statements
-    statement, multiparams
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1014, in execute
-    return meth(self, multiparams, params)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1133, in _execute_clauseelement
-    distilled_params,
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1318, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1512, in _handle_dbapi_exception
-    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 178, in raise_
-    raise exception
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1278, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 593, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 1 - probably unsupported type.
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('dana', <wtforms.fields.simple.TextAreaField object at 0x7f6426fddc50>, 3)]
-(Background on this error at: http://sqlalche.me/e/13/rvf5)
-2020-07-16 20:21:17,915 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-16 20:21:41,176 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-16 22:13:06,389 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-16 22:13:09,895 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-17 13:12:38,233 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-17 13:13:52,620 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-17 13:37:55,953 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-20 13:16:25,721 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-20 16:08:12,454 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:46]
-2020-07-21 12:39:01,305 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
-2020-07-21 13:32:45,083 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
-2020-07-21 13:43:46,294 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
-2020-07-21 16:49:17,331 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
-2020-07-21 16:49:51,534 ERROR: Exception on /reset_password_request [POST] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 18, in before_request
+    if current_user.is_authenticated:
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/models.py", line 140, in load_user
+    return User.query.get(int(id))
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1354, in _configure_all
+    configure_mappers()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3276, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Class <class 'app.models.Message'> does not have a mapped column named 'recipient_id'
+2020-07-31 08:50:51,905 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -94,12 +47,32 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/routes.py", line 170, in reset_password_request
-    send_email(user)
-TypeError: send_email() missing 4 required positional arguments: 'sender', 'recepients', 'text_body', and 'html_body'
-2020-07-21 18:50:06,755 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
-2020-07-21 18:50:32,495 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:48]
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2242, in preprocess_request
+    rv = func()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 18, in before_request
+    if current_user.is_authenticated:
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/models.py", line 140, in load_user
+    return User.query.get(int(id))
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1354, in _configure_all
+    configure_mappers()
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3276, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Class <class 'app.models.Message'> does not have a mapped column named 'recipient_id'

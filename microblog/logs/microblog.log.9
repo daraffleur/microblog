@@ -1,4 +1,4 @@
-2020-07-31 08:50:00,090 ERROR: Exception on /favicon.ico [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+2020-07-31 08:49:20,379 ERROR: Exception on /favicon.ico [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -37,8 +37,7 @@ Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3276, in configure_mappers
     raise e
 sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Class <class 'app.models.Message'> does not have a mapped column named 'recipient_id'
-2020-07-31 08:50:47,406 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:83]
-2020-07-31 08:50:50,255 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+2020-07-31 08:49:21,507 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -64,7 +63,7 @@ Traceback (most recent call last):
     current_app.login_manager._load_user()
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/login_manager.py", line 318, in _load_user
     user = self._user_callback(user_id)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/models.py", line 140, in load_user
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/models.py", line 142, in load_user
     return User.query.get(int(id))
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
     mapper = orm.class_mapper(type)
@@ -74,19 +73,6 @@ Traceback (most recent call last):
     mapper._configure_all()
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1354, in _configure_all
     configure_mappers()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3280, in configure_mappers
-    mapper._post_configure_properties()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 1967, in _post_configure_properties
-    prop.init()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/interfaces.py", line 197, in init
-    self.do_init()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/relationships.py", line 2076, in do_init
-    self._process_dependent_arguments()
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/relationships.py", line 2105, in _process_dependent_arguments
-    setattr(self, attr, attr_value())
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/ext/declarative/clsregistry.py", line 326, in __call__
-    x = eval(self.arg, globals(), self._dict)
-  File "<string>", line 1, in <module>
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/ext/declarative/clsregistry.py", line 222, in __getattr__
-    % (self.cls, key)
-sqlalchemy.exc.InvalidRequestError: Class <class 'app.models.Message'> does not have a mapped column named 'recipient_id'
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/sqlalchemy/orm/mapper.py", line 3276, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class User->user'. Original exception was: Class <class 'app.models.Message'> does not have a mapped column named 'recipient_id'

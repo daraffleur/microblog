@@ -1,4 +1,4 @@
-2020-07-28 17:34:02,558 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+2020-07-31 08:52:24,845 ERROR: Exception on /auth/login [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,10 +12,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 49, in index
-    prev_url=prev_url)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/auth/routes.py", line 29, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -26,7 +24,7 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/index.html", line 2, in top-level template code
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/auth/login.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -38,8 +36,8 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
     {% block navbar %}
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 36, in block "navbar"
-    <li><a href="{{ url_for('user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 34, in block "navbar"
+    <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
@@ -50,9 +48,8 @@ Traceback (most recent call last):
     endpoint, values, method=method, force_external=external
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'main.user' instead?
-2020-07-28 17:34:30,155 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:78]
-2020-07-28 17:34:33,982 ERROR: Exception on / [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-07-31 08:53:12,372 ERROR: Exception on /auth/login [GET] [in /home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -66,10 +63,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/main/routes.py", line 49, in index
-    prev_url=prev_url)
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/auth/routes.py", line 29, in login
+    return render_template('auth/login.html', title=_('Sign In'), form=form)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -80,7 +75,7 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/index.html", line 2, in top-level template code
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/auth/login.html", line 2, in top-level template code
     {% import 'bootstrap/wtf.html' as wtf %}
   File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -92,8 +87,8 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
     {% block navbar %}
-  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 37, in block "navbar"
-    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+  File "/home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/templates/base.html", line 34, in block "navbar"
+    <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/flask/app.py", line 2216, in handle_url_build_error
@@ -104,5 +99,5 @@ Traceback (most recent call last):
     endpoint, values, method=method, force_external=external
   File "/home/dana/Стільниця/FLASK_MICROBLOG/env/lib/python3.7/site-packages/werkzeug/routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'logout'. Did you mean 'auth.logout' instead?
-2020-07-28 17:34:51,814 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:78]
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-07-31 08:53:22,338 INFO: Microblog startup [in /home/dana/Стільниця/FLASK_MICROBLOG/microblog/app/__init__.py:83]
